@@ -220,7 +220,7 @@
   .cnt-Box a, .cnt-Box2 a, .cnt-Box3 a, .cnt-Box4 a, .cnt-Box5 a, .cnt-Box6 a {
     padding: 5px 25px 10px 25px;
     text-decoration: none;
-    color: #1E1E1E;
+    color: #FF4501;
     background: #828282;
     margin-top: 15px;
     border-radius: 3px;
@@ -267,9 +267,9 @@
   .srv1 , .srv2 {
     margin: 30px;
     background: #212121;
-    padding: 50px;
-    width: 250px;
-    height: 200px;
+    padding: 0px;
+    width: 150px;
+    height: 180px;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -318,6 +318,22 @@
     margin: 15px;
     border-radius: 5px;
   }
+  .iBox1 img {
+
+    width: 150px;
+    height: 150px
+  }
+  .iBox2 img {
+
+    width: 150px;
+    height: 150px
+  }
+  .iBox3 img {
+
+    width: 150px;
+    height: 150px
+  }
+
   /*  FOOTER  */
   #foot {
     background: #1E1E1E;
@@ -434,7 +450,7 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-      width: 272px;
+      width: 150px;
     }
     #content5 {
       display: flex;
@@ -449,7 +465,7 @@
       align-items: center;
     }
     .iBox1 , .iBox2 , .iBox3 {
-      width: 274px;
+      width: 150px;
     }
     #foot {
       height: 150px;
