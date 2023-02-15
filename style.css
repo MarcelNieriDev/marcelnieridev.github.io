@@ -410,6 +410,8 @@
   }
   .cntImg img {
     visibility: hidden;
+    max-width: 430px;
+    border-radius: 25%;
   }
   #content2 {
     display: flex;
