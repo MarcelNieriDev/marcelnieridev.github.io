@@ -1,218 +1,41 @@
-var state = { board: [], currentGame: [], savedGames: [] };
+// Função para atualizar a data e hora
+function updateDateTime() {
+  const dateTimeElement = document.getElementById('data-hora');
+  const now = new Date();
+  
+  // Formatando a data e hora como "dia/mês/ano - 00:00hrs"
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Mês começa do zero
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const formattedDateTime = `${day}/${month}/${year} - ${hours}:${minutes}hrs`;
 
-function start() {
-  readLocalStorage();
-  createBoard();
-  newGame();
+  dateTimeElement.textContent = formattedDateTime;
 }
 
-function readLocalStorage() {
-  if (!window.localStorage) {
-    return;
-  }
-  var savedGamesFromLocalStorage = window.localStorage.getItem('saved-games');
+// Atualiza a data e hora a cada segundo
+setInterval(updateDateTime, 1000);
 
-  if (savedGamesFromLocalStorage) {
-    state.savedGames = JSON.parse(savedGamesFromLocalStorage);
-  }
-}
+// Alterna o tema e o conteúdo da página
+document.getElementById('alternar-tema').addEventListener('click', function () {
+  document.body.classList.toggle('tema-claro');
 
-function writeToLocalStorage() {
-  window.localStorage.setItem('saved-games', JSON.stringify(state.savedGames));
-}
-
-function createBoard() {
-  state.board = [];
-
-  for (var i = 1; i <= 60; i++) {
-    state.board.push(i);
-  }
-}
-
-function newGame() {
-  resetGame();
-  render();
-}
-
-function render() {
-  renderBoard();
-  renderButtons();
-  renderSavedGames();
-}
-
-function renderBoard() {
-  var divBoard = document.querySelector('#megasena-board');
-  divBoard.innerHTML = '';
-
-  var ulNumbers = document.createElement('ul');
-  ulNumbers.classList.add('numbers');
-
-  for (var i = 0; i < state.board.length; i++) {
-    var currentNumber = state.board[i];
-
-    var liNumber = document.createElement('li');
-    liNumber.textContent = currentNumber;
-    liNumber.classList.add('number');
-
-    liNumber.addEventListener('click', handleNumberClick);
-
-    if (isNumberInGame(currentNumber)) {
-      liNumber.classList.add('selected-number');
-    }
-
-    ulNumbers.appendChild(liNumber);
-  }
-
-  divBoard.appendChild(ulNumbers);
-}
-
-function handleNumberClick(event) {
-  var value = Number(event.currentTarget.textContent);
-
-  if (isNumberInGame(value)) {
-    removeNumberFromGame(value);
+  if (document.body.classList.contains('tema-claro')) {
+    this.textContent = 'Tema Escuro';
+    document.getElementById('profile-image').src = 'assets/images/tema claro.png';
+    document.querySelector('.sobre img').src = 'assets/images/perfil-claro.png';
+    document.querySelector('.conteudo-home .nome').classList.add('tema-claro');
+    document.querySelector('.conteudo-home .descricao').classList.add('tema-claro');
   } else {
-    addNumberToGame(value);
+    this.textContent = 'Tema Claro';
+    document.getElementById('profile-image').src = 'assets/images/Acenando perfil.png';
+    document.querySelector('.sobre img').src = 'assets/images/perfil.png';
+    document.querySelector('.conteudo-home .nome').classList.remove('tema-claro');
+    document.querySelector('.conteudo-home .descricao').classList.remove('tema-claro');
   }
+});
 
-  render();
-}
-
-function renderButtons() {
-  var divButtons = document.querySelector('#megasena-buttons');
-  divButtons.innerHTML = '';
-
-  var buttonNewGame = createNewGameButton();
-  var buttonRandomGame = createRandomGameButton();
-  var buttonSaveGame = createSaveGameButton();
-
-  divButtons.appendChild(buttonNewGame);
-  divButtons.appendChild(buttonRandomGame);
-  divButtons.appendChild(buttonSaveGame);
-}
-
-function createRandomGameButton() {
-  var button = document.createElement('button');
-  button.textContent = 'PALPITE';
-
-  button.addEventListener('click', randomGame);
-
-  return button;
-}
-
-function createNewGameButton() {
-  var button = document.createElement('button');
-  button.textContent = 'Novo jogo';
-
-  button.addEventListener('click', newGame);
-
-  return button;
-}
-
-function createSaveGameButton() {
-  var button = document.createElement('button');
-  button.textContent = 'Salvar jogo';
-  button.disabled = !isGameComplete();
-
-  button.addEventListener('click', saveGame);
-
-  return button;
-}
-
-function renderSavedGames() {
-  var divSavedGames = document.querySelector('#megasena-saved-games');
-  divSavedGames.innerHTML = '';
-
-  if (state.savedGames.length === 0) {
-    divSavedGames.innerHTML = '<p>Nenhum jogo salvo</p>';
-  } else {
-    var ulSavedGames = document.createElement('ul');
-
-    for (var i = 0; i < state.savedGames.length; i++) {
-      var currentGame = state.savedGames[i];
-
-      var liGame = document.createElement('li');
-      liGame.textContent = currentGame.join(' | ');
-
-      ulSavedGames.appendChild(liGame);
-    }
-
-    divSavedGames.appendChild(ulSavedGames);
-  }
-}
-
-function addNumberToGame(numberToAdd) {
-  if (numberToAdd < 1 || numberToAdd > 60) {
-    console.error('Número inválido', numberToAdd);
-    return;
-  }
-
-  if (state.currentGame.length >= 6) {
-    console.error('O jogo já está completo.');
-    return;
-  }
-
-  if (isNumberInGame(numberToAdd)) {
-    console.error('Este número já está no jogo.', numberToAdd);
-    return;
-  }
-
-  state.currentGame.push(numberToAdd);
-}
-
-function removeNumberFromGame(numberToRemove) {
-  if (numberToRemove < 1 || numberToRemove > 60) {
-    console.error('Número inválido', numberToRemove);
-    return;
-  }
-
-  var newGame = [];
-
-  for (var i = 0; i < state.currentGame.length; i++) {
-    var currentNumber = state.currentGame[i];
-
-    if (currentNumber === numberToRemove) {
-      continue;
-    }
-
-    newGame.push(currentNumber);
-  }
-
-  state.currentGame = newGame;
-}
-
-function isNumberInGame(numberToCheck) {
-  return state.currentGame.includes(numberToCheck);
-}
-
-function saveGame() {
-  if (!isGameComplete()) {
-    console.error('O jogo não está completo!');
-    return;
-  }
-
-  state.savedGames.push(state.currentGame);
-  writeToLocalStorage();
-  newGame();
-}
-
-function isGameComplete() {
-  return state.currentGame.length === 6;
-}
-
-function resetGame() {
-  state.currentGame = [];
-}
-
-function randomGame() {
-  resetGame();
-
-  while (!isGameComplete()) {
-    var randomNumber = Math.ceil(Math.random() * 60);
-    addNumberToGame(randomNumber);
-  }
-
-  render();
-}
-
-start();
+// Chama a função para definir a data e hora imediatamente
+updateDateTime();
+  

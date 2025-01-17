@@ -1,236 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portifólio</title>
-    <link rel="icon" type="image/x-icon" href="img/icons/favicon/favicon.ico" />
-    <link rel="stylesheet" href="/css/Style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/Style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+  <title>Portfólio</title>
+</head>
+<body> 
+  <header class="header">
+    <a href="#" class="data-hora" id="data-hora"></a>
+    <button id="alternar-tema" class="botao-tema">Tema Claro</button>
+    <i class='bx bx-menu' id="icone-menu"></i>
+    <nav class="navbar">
+      <a href="#sobre" class="ativo">Sobre</a>
+      <a href="#estudos">Estudos</a>
+      <a href="#experiencias">Experiências</a>
+      <a href="#Projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+  <section class="home" id="home">
+    <div class="conteudo-home">
+      <h3>Olá, meu nome é</h3>
+      <h1>Marcel Nieri</h1>
+      <h3>Aspirante ao desenvolvimento de soluções práticas para o <span>UNIVERSO WEB</span></h3>
+      <p>Fã de café, levemente eclético e virginiano. Prefiro cores neutras e nada de estampas. Tenho um humor estável, isso torna meus dias mais agradáveis e equilibrados.</p>
+      <div class="redes-sociais">
+          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-tiktok'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+      <a href="#" class="botao">Baixar Currículo</a>
+    </div>
+    <div class="imagem-home">
+      <img id="profile-image" src="/assets/images/Acenando perfil.png" alt="foto perfil">
+    </div>
+  </section>
 
-  <body>
-    <header>
-      <nav id="container">
-        <a href="#" class="logo"
-          ><img src="imagem/icons/junior.png" alt="user" />Olá, é bom te ver
-          aqui</a
-        >
-        <ul class="menu">
-          <li><a href="#content2">Sobre</a></li>
-          <li><a href="#content3">Projetos</a></li>
-          <li><a href="#content4">Habilidades</a></li>
-          <li><a href="#content5">Estudando</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!--Seção Sobre Mim-->
+  <section class="sobre" id="sobre">
+    <div>
+      <img class="img-perfil" src="/assets/images/perfil.png" alt="Imagem de perfil">
+    </div>
 
-    <main>
-      <section id="content">
-        <div class="cntTxt">
-          <h1>
-            Sou o <br />
-            Marcel Nieri
-          </h1>
-          <p>
-            Developer LOADING<img
-              src="imagem/icons/loading.png"
-              alt="loading"
-            />
-          </p>
-          <button class="bttn">
-            <span
-              ><a href="cv/currículo_Marcel_Nieri_cv.pdf" download="Currículo"
-                >Currículo PDF</a
-              ></span
-            >
-          </button>
-        </div>
+    <div class="conteudo-sobre">
+      <h2 class="heading">Sobre <span>Mim</span></h2>
+      <h3>Front-End Developer</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim omnis ea maiores quam eos nemo tenetur deserunt esse corporis! Quod ratione in commodi, laboriosam possimus enim tempora minima iure sequi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, aspernatur exercitationem. Facere alias accusamus dolore, eius architecto numquam a tempora ratione iste sed, perspiciatis accusantium illum iure. Harum, cumque repellat!</p>
+      <a href="#" class="botao">Saiba mais</a>
+    </div>
+  </section>
 
-        <div class="cntImg">
-          <img
-            src="imagem/Image_Marcel-removebg-preview.png"
-            alt="ilustração"
-          />
-        </div>
-      </section>
+  <!--Seção Estudos-->
 
-      <section id="content2">
-        <div class="cnt2">
-          <h2><img src="imagem/icons/sobre.png" alt="sobre mim" />Sobre</h2>
-          <p>
-            Estudando Análise e Desenvolvimento de Sistemas pela universidade
-            Anhembi Morumbi, iniciando o segundo semestre com previsão de
-            conclusão em Jul/2024.<br />Tenho me dedicado ao aprendizado sobre
-            as tecnologias e suas aplicações no mercado de trabalho.<br />
-            Atuei por mais de 10 anos na área de vendas e pós-vendas,
-            considerando a maior parte dessa experiência em liderança e gestão
-            administrativa.<br />
-            Ao longo destes anos adquiri competências importantes para qualquer
-            área: foco no cliente, garantia de qualidade,capacidade analítica, 
-            comunicação eficaz e comprometimento, autonomia, liderança, resolução 
-            de conflitos, determinação e confiança.<br />
-            Contudo, decidi realizar uma transição de carreira para o setor de
-            tecnologia. Tenho me dedicado a estudar e me capacitar para
-            desempenhar um cargo nesta área. O que me motiva são os desafios que
-            serão vencidos nessa jornada. <br />¯\_( ͡° ͜ʖ ͡°)_/¯
-          </p>
-        </div>
+  <section class="estudos" id="estudos">
+    <h2 class="heading">Meu <span>Aprendizado</span></h2>
 
-        <div class="cnt-2">
-          <div class="name">
-            <a href="https://www.linkedin.com/in/marcelnieri/" target="_blank"
-              ><img src="imagem/icons/linkedin.png" alt="Me"
-            /></a>
-            <h3>Linkedin</h3>
-            <p>marcelnieri</p>
-          </div>
-
-          <div class="email">
-            <a href="nierimarcel@gmail.com" target="_blank"
-              ><img src="imagem/icons/email.png" alt="Contact"
-            /></a>
-            <h3>E-mail</h3>
-            <p>marcelnieri@gmail.com</p>
-          </div>
-
-          <div class="inst">
-            <a href="https://www.instagram.com/codeibuguei/" target="_blank"
-              ><img src="imagem/icons/instagram.png" alt="Social media"
-            /></a>
-            <h3>Instagram</h3>
-            <p>@CODEIBUGUEI</p>
-          </div>
-
-          <div class="contac">
-            <a
-              href="
-          https://wa.me/+5511983011927?text=Ol%C3%A1,%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20Portifólio.%20%20
-          "
-              target="_blank"
-              ><img src="imagem/icons/smartphone.png" alt="phone"
-            /></a>
-            <h3>Telefone</h3>
-            <p>(11) 983011927</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="content3">
-        <div class="cnt3">
-          <h2><img src="imagem/icons/projetos.png" alt="pc" />Projetos</h2>
-        </div>
-
-        <div class="cnt-3">
-          <div class="cnt-Box">
-            <h3>Reflexão</h3>
-            <p>Tecnologias: ...</p>
-            <a href="projeto-1.html" target="_blank">CSS | Javascript</a>
-          </div>
-
-          <div class="cnt-Box2">
-            <h3>Jogo Megasena</h3>
-            <p>Tecnologias: ...</p>
-            <a href="jogo-megasena.html">Muito javaScript</a>
-          </div>
-
-          <div class="cnt-Box3">
-            <h3>Em breve</h3>
-            <p>Tecnologias: ...</p>
-            <a href="#content3">Em breve</a>
-          </div>
-
-          <div class="cnt-Box4">
-            <h3>Em breve</h3>
-            <p>Tecnologias: ...</p>
-            <a href="#content3">Em breve</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="content4">
-        <div class="cnt-4">
-          <h2>
-            <img
-              src="imagem/icons/serviços.png"
-              alt="icon"
-              class="serv"
-            />Habilidades
-          </h2>
-        </div>
-
-        <div class="cnt-Srv">
-          <div class="srv1">
-            <img src="imagem/icons/front-end.gif" alt="web" />
-            <h3>Front-end</h3>
-          </div>
-
-          <div class="srv2">
-            <img src="imagem/icons/back-end.gif" alt="segurança" />
-            <h3>Back-end</h3>
-          </div>
-        </div>
-      </section>
-
-      <section id="content5">
-        <div class="cnt-05">
-          <h2>
-            <img
-              src="imagem/icons/estudos.png"
-              alt="skill"
-              class="skills"
-            />Estudando
-          </h2>
-        </div>
-
-        <div class="img-05">
-          <div class="iBox1">
-            <img src="imagem/icons/CSharp.png" alt=".C#" />
-          </div>
-        <div class="img-05">
-          
-
-          <div class="iBox2">
-            <img
-              src="imagem/icons/teste-de-software-com-ilustracao.png"
-              alt="Teste de Software"
-            />
-          </div>
-          <div class="iBox3">
-            <img
-              src="imagem/Agile.jpg"
-              alt="Metodologia Ágil"
-            />
-          </div>
-
-          
-        </div>
-      </section>
-    </main>
-
-    <footer id="foot">
-      <div class="copy">
-        <p id="current-date"></p>
-        <p>&copy; <em>Marcel Nieri Dev</em></p>
+    <div class="container-estudos">
+      <div class="estudos-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>JavaScript</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur </p>
+        <a href="#" class="botao">Saiba mais</a>
       </div>
 
-      <div class="btn-ft">
-        <a href="#container">Topo</a>
+      <div class="estudos-box">
+        <i class='bx bxl-nodejs' ></i> 
+        <h3>Node.js</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur</p>
+        <a href="#" class="botao">Saiba mais</a>
       </div>
-    </footer>
-    <script>
-      date = new Date();
-      year = date.getFullYear();
-      month = date.getMonth() + 1;
-      day = date.getDate();
-      document.getElementById('current-date').innerHTML =
-        day + '/' + month + '/' + year;
-    </script>
-  </body>
+
+      <div class="estudos-box">
+        <i class='bx bxl-react' ></i>
+        <h3>React</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur </p>
+        <a href="#" class="botao">Saiba mais</a>
+      </div>
+
+      <div class="estudos-box">
+        <i class='bx bxl-react' ></i>
+        <h3>React</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur</p>
+        <a href="#" class="botao">Saiba mais</a>
+      </div>
+
+      <div class="estudos-box">
+        <i class='bx bxl-react' ></i>
+        <h3>React</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur </p>
+        <a href="#" class="botao">Saiba mais</a>
+      </div>
+
+      <div class="estudos-box">
+        <i class='bx bxl-react' ></i>
+        <h3>React</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, cupiditate asperiores quisquam repellat commodi sapiente dolorem, recusandae adipisci saepe ullam quis minima nihil. Similique quod sunt, accusantium maxime minus ducimus nostrum, debitis expedita dolore voluptates quibusdam. Repellat consectetur</p>
+        <a href="#" class="botao">Saiba mais</a>
+      </div>
+    </div>     
+  </section>
+
+  <!--Seção Experiências-->
+<section class="experiencias" id="experiencias">
+  <h2 class="heading">Experiências <span>Profissionais</span></h2>
+  <div class="container-experiencias">
+    <div class="experiencias-box">
+      <img src="" alt="">
+    </div>
+  </div>
+</section>
+  <!-- Referência ao arquivo JavaScript -->
+  <script src="/js/script.js"></script>
+</body>
 </html>
