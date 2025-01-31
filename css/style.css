@@ -28,6 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 100;
+  user-select: none; /* Evita a seleção do texto no cabeçalho */
 }
 
 #navbar {
@@ -38,6 +39,7 @@ header {
   max-width: 1200px;
   padding: 0 2rem;
   margin: 0 auto;
+  user-select: none; /* Evita a seleção do texto na barra de navegação */
 }
 
 .nav-datetime {
@@ -45,7 +47,7 @@ header {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-color);
-  user-select: none;
+  user-select: none; /* Evita a seleção do texto da data e hora */
 }
 
 .nav-list {
@@ -53,6 +55,7 @@ header {
   display: flex;
   align-items: center;
   gap: 3rem;
+  user-select: none; /* Evita a seleção dos itens do menu */
 }
 
 .nav-iten a {
@@ -62,6 +65,7 @@ header {
   font-weight: 500;
   color: var(--text-color);
   transition: color 0.4s;
+  user-select: none; /* Evita a seleção dos links do menu */
 }
 
 .nav-iten a:hover {
@@ -73,6 +77,7 @@ header {
   flex-direction: column;
   cursor: pointer;
   gap: 0.25rem;
+  user-select: none; /* Evita a seleção do ícone do menu hambúrguer */
 }
 
 .hamburger div {
@@ -121,6 +126,7 @@ header {
   transition: 0.5s ease;
   border: none;
   margin-top: 2rem; /* Adicionando espaço entre os ícones sociais e o botão */
+  user-select: none; /* Evita a seleção do botão */
 }
 
 .btn:hover {
@@ -146,52 +152,7 @@ header {
   color: var(--main-color);
   margin: 0 0.5rem; /* Ajusta o espaçamento entre os ícones no desktop */
   transition: 0.5s ease;
-}
-
-.social-media a:hover {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
-}
-
-/* Estilização da seção Home */
-#home {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  padding: 10rem 2rem 2rem;
-  margin: 0 auto;
-}
-
-.home-content .home-title {
-  font-size: 2.75rem;
-  font-weight: 700;
-}
-
-.home-content .home-text {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  max-width: 31.25rem;
-}
-
-/* Ícones das redes sociais */
-.social-media {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  color: var(--main-color);
-  transition: 0.5s ease;
+  user-select: none; /* Evita a seleção dos ícones das redes sociais */
 }
 
 .social-media a:hover {
@@ -207,6 +168,7 @@ span {
 main figure .home-image {
   width: 100%;
   max-width: 30rem;
+  user-select: none; /* Evita a seleção da imagem */
 }
 
 /* SEÇÃO ESTUDO */
@@ -218,6 +180,7 @@ main figure .home-image {
   text-align: center;
   padding: 5rem;
   font-size: 4rem;
+  user-select: none; /* Evita a seleção do título */
 }
 
 .study .study-container {
@@ -237,6 +200,7 @@ main figure .home-image {
   margin: 0.5rem;
   padding: 2rem;
   transition: 0.5s ease;
+  user-select: none; /* Evita a seleção das caixas de estudo */
 }
 
 .study .study-container .study-box:hover {
@@ -247,10 +211,12 @@ main figure .home-image {
 .study .study-container .study-box i {
   font-size: 4rem;
   color: var(--main-color);
+  user-select: none; /* Evita a seleção dos ícones de estudo */
 }
 
 .study .study-container .study-box h3 {
   font-size: 2rem;
+  user-select: none; /* Evita a seleção dos títulos das caixas de estudo */
 }
 
 .study .study-container .study-box p {
@@ -277,6 +243,7 @@ main figure .home-image {
   display: flex;
   align-items: center;
   gap: 2rem;
+  user-select: none; /* Evita a seleção dos elementos da escola de treinamento */
 }
 
 .training .training-container .training-content-box {
@@ -289,6 +256,7 @@ main figure .home-image {
   transition: 0.5s ease;
   position: relative;
   text-align: center;
+  user-select: none; /* Evita a seleção das caixas de treinamento */
 }
 
 .training .training-container .training-content-box:hover {
@@ -300,11 +268,13 @@ main figure .home-image {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  user-select: none; /* Evita a seleção dos links de download */
 }
 
 .training .training-container .training-content-box i {
   font-size: 3rem;
   color: white;
+  user-select: none; /* Evita a seleção dos ícones de treinamento */
 }
 
 /* SEÇÃO EXPERIÊNCIAS */
@@ -318,6 +288,7 @@ main figure .home-image {
 
 .container h1 {
   text-align: center;
+  user-select: none; /* Evita a seleção dos títulos */
 }
 
 .timeline {
@@ -343,41 +314,12 @@ main figure .home-image {
   border: 3px #333333 solid;
   position: relative;
   left: 1px;
+  user-select: none; /* Evita a seleção dos pontos da timeline */
 }
 
 .timeline ul li .content {
   width: 50%;
   padding: 0 20px;
-}
-
-.timeline ul li:nth-child(odd) .content {
-  padding-left: 0;
-}
-
-.timeline ul li:nth-child(odd) .date {
-  padding-right: 0;
-}
-
-.timeline ul li:nth-child(even) .content {
-  padding-right: 0;
-}
-
-.timeline ul li:nth-child(even) .date {
-  padding-left: 0;
-}
-
-.timeline ul li .date {
-  width: 50%;
-  padding: 0 20px;
-  font-weight: normal;
-}
-
-.timeline ul li .date h4 {
-  background-color: var(--second-bg-color);
-  width: 100px;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 10px;
 }
 
 .timeline ul li .content h3 {
@@ -387,6 +329,7 @@ main figure .home-image {
   text-align: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  user-select: none; /* Evita a seleção dos títulos das experiências */
 }
 
 .timeline ul li .content p {

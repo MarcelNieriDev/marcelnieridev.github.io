@@ -1,3 +1,4 @@
+// Função para formatar a data
 function formatDate(date) {
   const months = [
     "janeiro",
@@ -19,6 +20,7 @@ function formatDate(date) {
   return `São Paulo, ${day} de ${month} de ${year}`;
 }
 
+// Função para atualizar a data e hora
 function updateDateTime() {
   const now = new Date();
   const navDatetime = document.getElementById("nav-datetime");
@@ -32,12 +34,14 @@ function updateDateTime() {
 // Atualiza a data ao carregar a página
 updateDateTime();
 
-// Menu hamburguer
+// Função para ativar o menu hambúrguer
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navList = document.querySelector(".nav-list");
 
-  hamburger.addEventListener("click", function () {
-    navList.classList.toggle("active");
-  });
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+  }
 });
