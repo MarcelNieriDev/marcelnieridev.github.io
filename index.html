@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
-  <!-- .Cabeça. -->
+<html lang="pt-BR">
   <head>
-    <!-- Definições Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Links -->
     <link rel="stylesheet" href="/css/style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -21,16 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap"
       rel="stylesheet"
     />
-    <!-- Titulo da Página -->
     <title>Project Static Page</title>
   </head>
-  <!-- .Corpo. -->
   <body>
-    <!-- .Cabeçalho. -->
     <header>
-      <!-- .Menu de Navegação. -->
       <nav id="navbar">
-        <a href="#" class="nav-datetime" id="nav-datetime"></a>
+        <div class="nav-datetime" id="nav-datetime"></div>
         <ul class="nav-list">
           <li class="nav-iten">
             <a href="#">Home</a>
@@ -48,9 +41,13 @@
             <a href="#">Contato</a>
           </li>
         </ul>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </nav>
     </header>
-    <!-- .Conteudo Principal. -->
     <main>
       <section id="home">
         <div class="home-content">
@@ -58,25 +55,35 @@
             Olá, sou o Marcel, estudante de <br />
             <span>Engenharia de Software</span>
           </h1>
-
           <p class="home-text">
             Entusiasta da tecnologia e de como ela pode transformar a vida das
             pessoas, sou um aspirante ao desenvolvimento de soluções práticas
             para o mundo web. <br /><br />
             Citação preferida: 'Não sei, só sei que foi assim.' (Chicó)
           </p>
-          <!-- .Redes Sociais. -->
           <div class="social-media">
-            <a href="https://www.linkedin.com/in/marcelnieri/" target="_blank"
+            <a
+              href="https://www.linkedin.com/in/marcelnieri/"
+              target="_blank"
+              aria-label="LinkedIn"
               ><i class="bx bxl-linkedin-square"></i
             ></a>
-            <a href="https://github.com/MarcelNieriDev" target="_blank"
+            <a
+              href="https://github.com/MarcelNieriDev"
+              target="_blank"
+              aria-label="GitHub"
               ><i class="bx bxl-github"></i
             ></a>
-            <a href="https://www.instagram.com/codeibuguei/" target="_blank"
+            <a
+              href="https://www.instagram.com/codeibuguei/"
+              target="_blank"
+              aria-label="Instagram"
               ><i class="bx bxl-instagram"></i
             ></a>
-            <a href="https://discord.gg/svUUSDjS" target="_blank"
+            <a
+              href="https://discord.gg/svUUSDjS"
+              target="_blank"
+              aria-label="Discord"
               ><i class="bx bxl-discord"></i
             ></a>
           </div>
@@ -95,7 +102,6 @@
           />
         </figure>
       </section>
-
       <section class="study" id="estudos">
         <h1 class="titles">Meu <span>Aprendizado</span></h1>
         <div class="study-container">
@@ -149,7 +155,6 @@
           <div class="study-box">
             <i class="bx bx-data"></i>
             <h3>BD</h3>
-
             <p>
               Sistema organizado para armazenar, gerenciar e recuperar dados
               estruturados, essencial para manter e acessar informações em
@@ -159,8 +164,6 @@
           </div>
         </div>
       </section>
-
-      <!-- SEÇÃO FORMAÇÃO -->
       <section class="training" id="formacao">
         <h1 class="titles">Formação e <span>Cursos</span></h1>
         <div class="training-container">
@@ -239,13 +242,13 @@
               enfrentar desafios de programação com uma base sólida em lógica.
             </p>
             <a
-              href="/ASSETS/Documents/certificado-marcelnieri-lógica-programação.pdf"
+              href="/ASSETS/Documents/certificado-marcelnieri-logica-programacao.pdf"
               target="_blank"
               ><i class="bx bx-cloud-download"></i
             ></a>
           </div>
           <div class="training-content-box">
-            <h2>Agile foundation</h2>
+            <h2>Agile Foundation</h2>
             <h3>Alura</h3>
             <p class="training-text">
               Durante o curso de Agile Foundation, aprendi os princípios do
@@ -281,7 +284,7 @@
             <h2>Node.js | React</h2>
             <h3>Adatech</h3>
             <p class="training-text">
-              Durante o curso de Node.jse React, aprendi a desenvolver
+              Durante o curso de Node.js e React, aprendi a desenvolver
               aplicações web modernas e escaláveis. Com o Node.js, adquiri
               habilidades para criar servidores e trabalhar com APIs, enquanto o
               React me permitiu criar interfaces de usuário dinâmicas e
@@ -313,7 +316,7 @@
           </div>
         </div>
       </section>
-      <!-- SEÇÃO EXPERIENCIAS -->
+      <!-- SEÇÃO EXPERIÊNCIAS -->
       <section class="experiences" id="experiencias">
         <div class="container">
           <h1 class="titles">Experiência <span>Profissional</span></h1>
@@ -323,11 +326,11 @@
                 <div class="content">
                   <h3>Desenvolvedor Web</h3>
                   <p>
-                    Desenvolvimento e gerenciamento de site em worpress, criação
-                    de conteudo visual e textual, atualização de redes sociais,
-                    acompanhamento e análise de estatisticas e métricas com
-                    Google Analytics e Search Console, responsavel pelo SEO da
-                    página para melhor ranqueamento nas pesquisas.
+                    Desenvolvimento e gerenciamento de site em WordPress,
+                    criação de conteúdo visual e textual, atualização de redes
+                    sociais, acompanhamento e análise de estatísticas e métricas
+                    com Google Analytics e Search Console, responsável pelo SEO
+                    da página para melhor ranqueamento nas pesquisas.
                   </p>
                 </div>
                 <div class="point"></div>
@@ -345,14 +348,14 @@
                     Product Owner - Especialista em relacionamento com o cliente
                     aplicando metodologias ágeis. Trabalhando em equipes
                     utilizando o framework Scrum. Produto atualmente voltado ao
-                    ecommerce com ERP que integra soluções completas
+                    e-commerce com ERP que integra soluções completas.
                   </p>
                 </div>
                 <div class="point"></div>
                 <div class="date">
                   <h4>
                     Out/2023 <br />
-                    mar/203
+                    Mar/2023
                   </h4>
                 </div>
               </li>
@@ -379,7 +382,7 @@
               </li>
               <li>
                 <div class="content">
-                  <h3>Lider de Pós Vendas</h3>
+                  <h3>Líder de Pós-Vendas</h3>
                   <p>
                     Gestão de equipe nas áreas de: treinamento, atendimento ao
                     cliente, serviços e garantia. Acompanhamento de serviços
@@ -400,8 +403,7 @@
         </div>
       </section>
     </main>
-    <!-- .Rodapé. -->
     <footer></footer>
-    <script src="/JS/javascript.js"></script>
+    <script src="/JS/javascript.js" async></script>
   </body>
 </html>
