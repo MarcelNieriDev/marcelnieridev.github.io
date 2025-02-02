@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br">
+  <!-- .Cabeça. -->
   <head>
+    <!-- Definições Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Links -->
     <link rel="stylesheet" href="/css/style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -18,14 +21,16 @@
       href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap"
       rel="stylesheet"
     />
+    <!-- Titulo da Página -->
     <title>Project Static Page</title>
   </head>
+  <!-- .Corpo. -->
   <body>
+    <!-- .Cabeçalho. -->
     <header>
-      <
       <nav id="navbar">
-        <div class="nav-datetime" id="nav-datetime"></div>
-        <ul class="nav-list">
+        <a href="#" class="nav-datetime" id="nav-datetime"></a>
+        <ul class="nav-list" id="nav-list">
           <li class="nav-iten">
             <a href="#">Home</a>
           </li>
@@ -42,13 +47,13 @@
             <a href="#">Contato</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
+        <!-- Ícone de menu para navegação móvel -->
+        <div class="menu-icon" id="menu-icon">
+          <i class="bx bx-menu"></i>
         </div>
       </nav>
     </header>
+    <!-- .Conteudo Principal. -->
     <main>
       <section id="home">
         <div class="home-content">
@@ -56,35 +61,25 @@
             Olá, sou o Marcel, estudante de <br />
             <span>Engenharia de Software</span>
           </h1>
+
           <p class="home-text">
             Entusiasta da tecnologia e de como ela pode transformar a vida das
             pessoas, sou um aspirante ao desenvolvimento de soluções práticas
             para o mundo web. <br /><br />
             Citação preferida: 'Não sei, só sei que foi assim.' (Chicó)
           </p>
+          <!-- .Redes Sociais. -->
           <div class="social-media">
-            <a
-              href="https://www.linkedin.com/in/marcelnieri/"
-              target="_blank"
-              aria-label="LinkedIn"
+            <a href="https://www.linkedin.com/in/marcelnieri/" target="_blank"
               ><i class="bx bxl-linkedin-square"></i
             ></a>
-            <a
-              href="https://github.com/MarcelNieriDev"
-              target="_blank"
-              aria-label="GitHub"
+            <a href="https://github.com/MarcelNieriDev" target="_blank"
               ><i class="bx bxl-github"></i
             ></a>
-            <a
-              href="https://www.instagram.com/codeibuguei/"
-              target="_blank"
-              aria-label="Instagram"
+            <a href="https://www.instagram.com/codeibuguei/" target="_blank"
               ><i class="bx bxl-instagram"></i
             ></a>
-            <a
-              href="https://discord.gg/svUUSDjS"
-              target="_blank"
-              aria-label="Discord"
+            <a href="https://discord.gg/svUUSDjS" target="_blank"
               ><i class="bx bxl-discord"></i
             ></a>
           </div>
@@ -103,6 +98,7 @@
           />
         </figure>
       </section>
+
       <section class="study" id="estudos">
         <h1 class="titles">Meu <span>Aprendizado</span></h1>
         <div class="study-container">
@@ -120,10 +116,9 @@
             <i class="bx bxl-react"></i>
             <h3>React</h3>
             <p>
-              React é uma biblioteca JavaScript desenvolvida pelo Facebook para
-              criar interfaces de usuário dinâmicas. Facilita a criação de
-              componentes reutilizáveis e melhora a performance das aplicações.
-              Sua modularidade torna o código mais fácil de manter.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              dignissimos porro veritatis enim veniam officia explicabo
+              excepturi corporis corrupti placeat.
             </p>
             <a class="btn">Saiba mais</a>
           </div>
@@ -157,6 +152,7 @@
           <div class="study-box">
             <i class="bx bx-data"></i>
             <h3>BD</h3>
+
             <p>
               Sistema organizado para armazenar, gerenciar e recuperar dados
               estruturados, essencial para manter e acessar informações em
@@ -166,6 +162,8 @@
           </div>
         </div>
       </section>
+
+      <!-- SEÇÃO FORMAÇÃO -->
       <section class="training" id="formacao">
         <h1 class="titles">Formação e <span>Cursos</span></h1>
         <div class="training-container">
@@ -212,54 +210,6 @@
               conduzir a descoberta de produtos de maneira eficaz.
             </p>
             <a
-              href="/ASSETS/Documents/certificado-marcelnieri-product-discovery.pdf"
-              target="_blank"
-              ><i class="bx bx-cloud-download"></i
-            ></a>
-          </div>
-          <div class="training-content-box">
-            <h2>Scrum Master</h2>
-            <h3>Digital Innovation</h3>
-            <p class="training-text">
-              Durante o curso de Scrum Master, aprendi sobre os papéis e
-              cerimônias do Scrum, como Sprint Planning e Daily Stand-ups.
-              Também estudei técnicas para remover impedimentos e melhorar a
-              comunicação na equipe. Ao final, me senti pronto para liderar
-              equipes em entregas ágeis.
-            </p>
-            <a
-              href="/ASSETS/Documents/certificado-marcelnieri-scrum-master.pdf"
-              target="_blank"
-              ><i class="bx bx-cloud-download"></i
-            ></a>
-          </div>
-          <div class="training-content-box">
-            <h2>Lógica de Programação</h2>
-            <h3>Senai</h3>
-            <p class="training-text">
-              Durante o curso de Lógica de Programação, aprendi a criar
-              algoritmos eficientes e compreender conceitos básicos como
-              variáveis e estruturas de controle. Desenvolvi habilidades para
-              modularizar, depurar e otimizar código. Me senti preparado para
-              enfrentar desafios de programação com uma base sólida em lógica.
-            </p>
-            <a
-              href="/ASSETS/Documents/certificado-marcelnieri-logica-programacao.pdf"
-              target="_blank"
-              ><i class="bx bx-cloud-download"></i
-            ></a>
-          </div>
-          <div class="training-content-box">
-            <h2>Agile Foundation</h2>
-            <h3>Alura</h3>
-            <p class="training-text">
-              Durante o curso de Agile Foundation, aprendi os princípios do
-              Manifesto Ágil e metodologias como Scrum e Kanban. Desenvolvi
-              habilidades para aplicar práticas ágeis, promovendo flexibilidade
-              e adaptabilidade. Me senti preparado para promover a cultura ágil
-              em qualquer ambiente de trabalho.
-            </p>
-            <a
               href="/ASSETS/Documents/certificado-marcelnieri-agile-foundation.pdf"
               target="_blank"
               ><i class="bx bx-cloud-download"></i
@@ -286,7 +236,7 @@
             <h2>Node.js | React</h2>
             <h3>Adatech</h3>
             <p class="training-text">
-              Durante o curso de Node.js e React, aprendi a desenvolver
+              Durante o curso de Node.jse React, aprendi a desenvolver
               aplicações web modernas e escaláveis. Com o Node.js, adquiri
               habilidades para criar servidores e trabalhar com APIs, enquanto o
               React me permitiu criar interfaces de usuário dinâmicas e
@@ -318,21 +268,21 @@
           </div>
         </div>
       </section>
-      <!-- SEÇÃO EXPERIÊNCIAS -->
+      <!-- SEÇÃO EXPERIENCIAS -->
       <section class="experiences" id="experiencias">
         <div class="container">
           <h1 class="titles">Experiência <span>Profissional</span></h1>
           <div class="timeline">
             <ul>
               <li>
-                <div class="content">
-                  <h3>Desenvolvedor Web</h3>
+                <div class="content-timeline">
+                  <h3>Matec Serviços - Desenvolvedor Web</h3>
                   <p>
-                    Desenvolvimento e gerenciamento de site em WordPress,
-                    criação de conteúdo visual e textual, atualização de redes
-                    sociais, acompanhamento e análise de estatísticas e métricas
-                    com Google Analytics e Search Console, responsável pelo SEO
-                    da página para melhor ranqueamento nas pesquisas.
+                    Desenvolvimento e gerenciamento de site em worpress, criação
+                    de conteudo visual e textual, atualização de redes sociais,
+                    acompanhamento e análise de estatisticas e métricas com
+                    Google Analytics e Search Console, responsavel pelo SEO da
+                    página para melhor ranqueamento nas pesquisas.
                   </p>
                 </div>
                 <div class="point"></div>
@@ -344,13 +294,13 @@
                 </div>
               </li>
               <li>
-                <div class="content">
-                  <h3>Desenvolvimento de projetos</h3>
+                <div class="content-timeline">
+                  <h3>Jetsoft - Desenvolvimento de projetos</h3>
                   <p>
                     Product Owner - Especialista em relacionamento com o cliente
                     aplicando metodologias ágeis. Trabalhando em equipes
                     utilizando o framework Scrum. Produto atualmente voltado ao
-                    e-commerce com ERP que integra soluções completas.
+                    ecommerce com ERP que integra soluções completas
                   </p>
                 </div>
                 <div class="point"></div>
@@ -362,8 +312,8 @@
                 </div>
               </li>
               <li>
-                <div class="content">
-                  <h3>Consultor Técnico Pleno</h3>
+                <div class="content-timeline">
+                  <h3>Japauto - Consultor Técnico Pleno</h3>
                   <p>
                     Prospecção e gerenciamento de carteira de clientes.
                     Acompanhamento da equipe de atendimento e serviços. Gestão
@@ -377,14 +327,14 @@
                 <div class="point"></div>
                 <div class="date">
                   <h4>
-                    Jan/2023 <br />
-                    Mar/2021
+                    Jan/2021 <br />
+                    Mar/2023
                   </h4>
                 </div>
               </li>
               <li>
-                <div class="content">
-                  <h3>Líder de Pós-Vendas</h3>
+                <div class="content-timeline">
+                  <h3>Remaza - Lider de Pós Vendas</h3>
                   <p>
                     Gestão de equipe nas áreas de: treinamento, atendimento ao
                     cliente, serviços e garantia. Acompanhamento de serviços
@@ -395,8 +345,8 @@
                 <div class="point"></div>
                 <div class="date">
                   <h4>
-                    Dez/2020 <br />
-                    Nov/2016
+                    Dez/2016 <br />
+                    Nov/2020
                   </h4>
                 </div>
               </li>
@@ -404,8 +354,39 @@
           </div>
         </div>
       </section>
+
+      <!-- SEÇÃO CONTATO -->
+       <section class="contact" id="contato">
+        <h1>Entre em <span>Contato</span></h1>
+        <form action="#" class="form-contact">
+          <div class="input-form-contact">
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+          </div>
+          <div class="input-form-contact">
+            <input type="tel" placeholder="Celular">
+            <input type="tel" placeholder="Fixo">
+          </div>
+          <textarea name="contato-portifolio" id="" cols="30" rows="10" placeholder="Deixe sua menssagem e responderei o mais breve possivel."></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+       </section>
     </main>
-    <footer></footer>
-    <script src="/JS/javascript.js" async></script>
+    <!-- .Rodapé. -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Marcel Nieri</p>        
+      </div>
+      <div class="footer-text">
+        <p>Contato<span> (11) 91078-0108</span></p>        
+      </div>
+      <div class="footer-text">
+        <p>Atualizado 02/2025 | &copy Desenvolvido por <span>My Self</span> </p>        
+      </div>
+      <div class="icon-top">
+        <a href="#home"><i class='bx bxs-up-arrow-circle'></i></a>
+      </div>
+    </footer>
+    <script src="/JS/javascript.js"></script>
   </body>
 </html>

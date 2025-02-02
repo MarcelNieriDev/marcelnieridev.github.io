@@ -1,47 +1,51 @@
-// Função para formatar a data
-function formatDate(date) {
-  const months = [
-    "janeiro",
-    "fevereiro",
-    "março",
-    "abril",
-    "maio",
-    "junho",
-    "julho",
-    "agosto",
-    "setembro",
-    "outubro",
-    "novembro",
-    "dezembro",
-  ];
-  const day = String(date.getDate()).padStart(2, "0"); // Garante dois dígitos
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  return `São Paulo, ${day} de ${month} de ${year}`;
-}
+// Início do código
+document.addEventListener("DOMContentLoaded", function () {
+  // Função para formatar data
+  function formatDate(date) {
+    const months = [
+      "janeiro",
+      "fevereiro",
+      "março",
+      "abril",
+      "maio",
+      "junho",
+      "julho",
+      "agosto",
+      "setembro",
+      "outubro",
+      "novembro",
+      "dezembro",
+    ];
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `São Paulo, ${day} de ${month} de ${year}`;
+  }
 
-// Função para atualizar a data e hora
-function updateDateTime() {
-  const now = new Date();
-  const navDatetime = document.getElementById("nav-datetime");
-
-  if (navDatetime) {
-    // Verifica se o elemento existe
+  // Função para atualizar data e hora no cabeçalho
+  function updateDateTime() {
+    const now = new Date();
+    const navDatetime = document.getElementById("nav-datetime");
     navDatetime.textContent = formatDate(now);
   }
-}
 
-// Atualiza a data ao carregar a página
-updateDateTime();
+  // Atualiza a data e hora ao carregar a página
+  updateDateTime();
 
-// Função para ativar o menu hambúrguer
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navList = document.querySelector(".nav-list");
+  // Atualiza a data e hora a cada minuto
+  setInterval(updateDateTime, 60000);
 
-  if (hamburger && navList) {
-    hamburger.addEventListener("click", function () {
-      navList.classList.toggle("active");
-    });
-  }
+  // Função para alternar a exibição do menu de navegação ao clicar no ícone do menu
+  const menuIcon = document.getElementById("menu-icon");
+  const navList = document.getElementById("nav-list");
+
+  menuIcon.addEventListener("click", function () {
+    navList.classList.toggle("nav-active");
+  });
+
+  // Função para alternar a exibição do menu de navegação ao clicar no ícone do menu (hamburger)
+  const hamburger = document.getElementById('hamburger');
+  hamburger.addEventListener('click', function() {
+    navList.classList.toggle('active');
+  });
 });
